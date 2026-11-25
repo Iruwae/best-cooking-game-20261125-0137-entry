@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Rush Hour Kitchen: an original 2D canvas cooking game. Take orders, chop, grill, plate and serve before the tickets run out.">
+<title>Rush Hour Kitchen — a tiny cooking game</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #1d1420; height: 100%; }
+  body { display: flex; align-items: center; justify-content: center;
+         font-family: "Trebuchet MS", Verdana, sans-serif; }
+  #wrap { text-align: center; }
+  canvas { background: #2b1d2e; border: 4px solid #f2b441; border-radius: 12px;
+           box-shadow: 0 10px 40px rgba(0,0,0,.6); cursor: pointer;
+           max-width: 96vw; max-height: 92vh; }
+  #hint { color: #e8dcc8; font-size: 13px; margin-top: 8px; line-height: 1.5; }
+  #hint b { color: #f2b441; }
+</style>
+</head>
+<body>
+<div id="wrap">
+  <canvas id="game" width="960" height="640"></canvas>
+  <div id="hint">
+    <b>WASD / arrows</b> move &nbsp;·&nbsp; <b>E</b> / <b>click a station</b> use it &nbsp;·&nbsp;
+    <b>P</b> pause &nbsp;·&nbsp; <b>R</b> restart after the shift ends<br>
+    Grab ingredients, chop, grill, build the dish on a plate, serve it at the window before the ticket runs out!
+  </div>
+</div>
+<script src="src/recipes.js"></script>
+<script src="src/orders.js"></script>
+<script src="src/kitchen.js"></script>
+<script src="src/input.js"></script>
+<script src="src/sound.js"></script>
+<script src="src/main.js"></script>
+</body>
+</html>
